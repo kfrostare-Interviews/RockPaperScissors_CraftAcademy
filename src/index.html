@@ -5,8 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta  http-equiv="X-UA-Compatible"  content="ie=edge">
     <title>Play</title>
+
+    <!-- Connecting my stylesheet css to the page -->
+    <link rel="stylesheet" href="./css/styles.css">
+
 </head>
 <body>
+    <!-- Just the header of the page -->
     <h1>Rock Paper Scissors</h1>
+
+    <!-- This is where the game lives -->
+    <section class="game">
+        <!-- This is the score board -->
+        <div class="score">
+            <div class="player-score">
+                <h2>Player</h2>
+                <p>0</p>
+            </div>
+            <div class="computer-score">
+                <h2>Computer</h2>
+                <p>0</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Connecting my logics- and user interface pages -->
+    <script src="./js/gameLogic.js"></script>
+    <script src="./js/gameUI.js"></script>
+
 </body>
 </html>
