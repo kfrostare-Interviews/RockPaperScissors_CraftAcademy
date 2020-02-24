@@ -1,0 +1,11 @@
+{
+  "name": "rock_paper_scissors",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:kfrostare/RockPaperScissors_CraftAcademy.git",
+  "author": "karolina <karolina.frostare@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^4.0.2"
+  }
+}
