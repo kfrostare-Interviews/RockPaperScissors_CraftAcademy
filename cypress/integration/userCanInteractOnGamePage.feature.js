@@ -13,7 +13,8 @@ describe('User can navigate the Game page', () => {
     it('player can click on one of the options/buttons ', () => {})
     it('player can see hand icons moving up and down', () => {})
     it('player can see title change to announce winner', () => {})
-    it('player can see score board change if they win/lose', () => {})
+    it('player can see massage "you owe x money, if loses', () => {})
+    it('player can see massage "x owe you money, if wins', () => {})
     it('player can keep playing until they win computers- or lose their own money', () => {})
     it('player can ', () => {})
 

@@ -64,6 +64,4 @@ This project is licensed under the MIT License.
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+* [Cypress testing for images](https://stackoverflow.com/questions/51246606/test-loading-of-image-in-cypress)
