@@ -1,14 +1,64 @@
 // Player can interact with game page 
 describe('User can navigate the Game page', () => {
+    beforeEach(() => {
+        cy.visit("http://localhost:3001");
+        cy.get('div[class="oliverImage"]').click();
+	  })
+    
+    describe('user can see the game page and'), () => {
 
-    it('player can see score board changed to $500 for both players', () => {})
-    it('player can see dollar icons in the score board next to score', () => {})
-    it('player can see title on game page "Make your choice"', () => {})
-    it('player can see background image on game page', () => {})
-    it('player can see hand icons on each side of the title', () => {})
-    it('player can see the icon they chose for player on left side', () => {})
-    it('player can see one of the other icons as player on left side', () => {})
-    it('player can see a bug icon for player on left side', () => {})
+      it('displays the "Make your choice" title', () => {
+			  cy.get('#makeChoice').should('contain', 'Make your choice');
+		  });
+
+      it('displays component name in url', () => {
+        cy.url().should('contain', 'game');
+      })
+
+      it('does not display start header', () => {
+        cy.get('#pickPlayer').should('not.exist');
+      });
+
+      it('displays background image', () => {
+        cy.route('.imageURL').as('image');
+        cy.wait('@image') // Don't really get what this does...
+        cy.get('.bg-hero').should('be.visible'); //.bg-hero is that a name or a pre-set cypress syntax command??
+      });
+
+      it('displays image dollar icons in score board', () => {
+        cy.get('div[class="dollarImage"]').find('img').should('be.visible');
+      });
+
+      it('displays score board starting on $500 for player', ('topLeft') => {
+        cy.get('#playerScore').should('contain', '500');
+      });
+
+      it('displays score board starting on $500 for computer', ('topRight') => {
+        cy.get('#computerScore').should('contain', '500');
+      });
+        
+      it('displays left hand icon below score board', ('left') => {
+        cy.get('div[class="leftHandImage"]').find('img').should('be.visible');
+      });
+
+      it('displays right hand icon below score board', ('right') => {
+        cy.get('div[class="rightHandImage"]').find('img').should('be.visible');
+      });
+
+      it('displays player avatar on left hand side', ('left') => {
+        cy.get('div[class="oliverImage"]').find('img').should('be.visible');
+      });
+
+      it('displays computer avatar on right hand side', ('right') => {
+        cy.get('div[class="noelImage"]').find('img').should('be.visible');
+        // How to tell Cypress it could be any of the four other avatars but not Oliver?!
+      });
+
+      
+
+    };
+)};
+
     it('player can see three buttons giving options of rock, paper or scissors', () => {})
     it('player can click on one of the options/buttons ', () => {})
     it('player can see hand icons moving up and down', () => {})
@@ -17,5 +67,3 @@ describe('User can navigate the Game page', () => {
     it('player can see massage "x owe you money, if wins', () => {})
     it('player can keep playing until they win computers- or lose their own money', () => {})
     it('player can ', () => {})
-
-)}
