@@ -54,13 +54,27 @@ describe('User can navigate the Game page', () => {
         // How to tell Cypress it could be any of the four other avatars but not Oliver?!
       });
 
-      
+      it('displays buttons for rock, paper, scissors', () => {
+        cy.get('#rockButton').find('button').should('be.visible'); 
+        cy.get('#paperButton').find('button').should('be.visible');
+        cy.get('#scissorsButton').find('button').should('be.visible');
+      });
+
+      it('clicks on an option and starts the game', () => {
+        beforeEach(() => {
+          cy.visit("http://localhost:3001");
+          cy.get('div[class="oliverImage"]').click();
+          cy.contains('#rockButton').click('center')
+          expect('#computerScore').to.not.be('nil')
+        })
+        cy.get('#computerScore').should('contain', '500');
+        expect($input).to.not.be('disabled') //trying to find a way for cypress to see when the game has started
+
+      });
 
     };
 )};
 
-    it('player can see three buttons giving options of rock, paper or scissors', () => {})
-    it('player can click on one of the options/buttons ', () => {})
     it('player can see hand icons moving up and down', () => {})
     it('player can see title change to announce winner', () => {})
     it('player can see massage "you owe x money, if loses', () => {})
