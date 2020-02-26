@@ -8,6 +8,5 @@ describe('User chooses to go with the Sad Path', () => {
     it('player tries to click on two options for rock, paper, scissors at the same time', () => {})
     it('player tries to click on -back button mid game', () => {})
     it('player tries to alter score board ', () => {})
-    it('player tries to', () => {})
 
 })

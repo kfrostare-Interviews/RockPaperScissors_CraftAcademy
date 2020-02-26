@@ -60,24 +60,27 @@ describe('User can navigate the Game page', () => {
         cy.get('#scissorsButton').find('button').should('be.visible');
       });
 
-      it('clicks on an option and starts the game', () => {
-        beforeEach(() => {
-          cy.visit("http://localhost:3001");
-          cy.get('div[class="oliverImage"]').click();
-          cy.contains('#rockButton').click('center')
-          expect('#computerScore').to.not.be('nil')
-        })
-        cy.get('#computerScore').should('contain', '500');
-        expect($input).to.not.be('disabled') //trying to find a way for cypress to see when the game has started
+    };
 
+    describe('user can see the game in action and'), () => {
+        beforeEach(() => {
+        cy.visit("http://localhost:3001");
+        cy.get('div[class="oliverImage"]').click();
+        cy.contains('#rockButton').click('center');
+      });
+      
+      it('the score board change for both players', () => {
+        cy.expect('#computerScore').to.not.be('500');
+        cy.expect('#playerScore').to.not.be('500');
       });
 
+      it('player can see computer hand change', () => {
+        cy.expect('#playerScore').to.not.be('500');
+      })
+
+      it('player can see massage "you owe x money, if loses', () => {})
+      it('player can see massage "you owe x money, if loses', () => {})
+      it('player can keep playing until they win computers- or lose their own money', () => {})
+    
     };
 )};
-
-    it('player can see hand icons moving up and down', () => {})
-    it('player can see title change to announce winner', () => {})
-    it('player can see massage "you owe x money, if loses', () => {})
-    it('player can see massage "x owe you money, if wins', () => {})
-    it('player can keep playing until they win computers- or lose their own money', () => {})
-    it('player can ', () => {})
