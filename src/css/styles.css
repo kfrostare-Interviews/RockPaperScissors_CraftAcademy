@@ -7,7 +7,10 @@
   box-sizing: border-box;
 }
 
-
+.gameHouse {
+  height: 100vh;
+  background-color: rgb(243, 125, 39); /* This isn't working, why?! */
+}
 
 
 /* Basic styling */
