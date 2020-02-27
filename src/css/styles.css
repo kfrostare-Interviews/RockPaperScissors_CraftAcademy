@@ -1,0 +1,92 @@
+/* Universal selector, regards all elements */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.gameHouse {
+  height: 100vh;
+  background-color: rgb(243, 125, 39);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.scoreBoard {
+  color: rgb(236, 236, 236);
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.scoreBoard h2 {
+  font-size: 40px;
+}
+
+.scoreBoard p {
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+}
+
+.startPage {
+  color: rgb(236, 236, 236);
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  opacity: 0; /* <--- This will need to change once the game- part is styled*/
+}
+
+.startPage h1 {
+  font-size: 50px;
+
+}
+
+.startPage button,
+.gameOptions button {
+  width: 150px;
+  height: 50px;
+  background: none;
+  border: none;
+  color: rgb(236, 236, 236);
+  font-size: 20px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.gamePage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.winner {
+  color: rgb(236, 236, 236);
+  text-align: center;
+  font-size: 50px;
+}
+
+.hands,
+.gameOptions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.computerHand {
+  transform: rotateY(180deg);
+}
+
+/* This will be for the start page to fade once a game has started */
+div.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+div.fadeIn {
+  opacity: 1;
+  pointer-events: all;
+}

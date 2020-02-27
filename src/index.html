@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Play</title>
+
+    <!-- Connecting my stylesheet css to the page -->
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+
+    <section class="gameHouse">
+      
+      <div class="scoreBoard">
+        <div class="playerScore">
+          <h2>Player</h2>
+          <p>0</p>
+        </div>
+        <div class="computerScore">
+          <h2>Computer</h2>
+          <p>0</p>
+        </div>
+      </div>
+      
+      <!-- This is the start page -->
+      <div class="startPage">
+        <h1>Rock Paper Scissors</h1>
+        <button>Pick a player</button>
+      </div>
+
+      <!-- This is the game page -->
+      <div class="gamePage">
+        <h2 class="winner">Choose an option</h2>
+        <div class="hands">
+          <img class="playerHand" src="./img/rockHand.png" alt="">  <!-- This needs to be rotated in css -->
+          <img class="computerHand" src="./img/rockHand.png" alt="">
+        </div>
+      </div>
+
+      <div class="gameOptions">
+        <button class="rock">rock</button>
+        <button class="paper">paper</button>
+        <button class="scissors">scissors</button>
+      </div>
+
+    </section>
+
+    <!-- Connecting my logics- and user interface pages -->
+    <script src="./js/gameLogic.js"></script>
+    <script src="./js/gameUI.js"></script>
+  </body>
+</html>
