@@ -79,3 +79,14 @@
 .computerHand {
   transform: rotateY(180deg);
 }
+
+/* This will be for the start page to fade once a game has started */
+div.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+div.fadeIn {
+  opacity: 1;
+  pointer-events: all;
+}
