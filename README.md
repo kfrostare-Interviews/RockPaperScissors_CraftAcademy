@@ -68,3 +68,4 @@ This project is licensed under the MIT License.
 * For info on section tags from [GeeksforGeeks](https://www.geeksforgeeks.org/html-section-tag/)
 * For hand- illustration art from [HiClipart](https://www.hiclipart.com/)
 * For info on Viewport Height in Css from [Sitepoint](https://www.sitepoint.com/css-viewport-units-quick-start/)
+* For inspiration on game structure from [Dev Ed](https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q)

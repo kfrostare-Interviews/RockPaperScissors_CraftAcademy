@@ -36,5 +36,46 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  opacity: 0; /* <--- This will need to change once the game- part is styled*/
+}
 
+.startPage h1 {
+  font-size: 50px;
+
+}
+
+.startPage button,
+.gameOptions button {
+  width: 150px;
+  height: 50px;
+  background: none;
+  border: none;
+  color: rgb(236, 236, 236);
+  font-size: 20px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.gamePage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.winner {
+  color: rgb(236, 236, 236);
+  text-align: center;
+  font-size: 50px;
+}
+
+.hands,
+.gameOptions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.computerHand {
+  transform: rotateY(180deg);
 }
