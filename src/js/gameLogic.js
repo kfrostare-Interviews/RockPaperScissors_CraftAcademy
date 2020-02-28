@@ -10,10 +10,14 @@ const game = () => {
     const playBtn = document.querySelector('.startPage button');
     const startScreen = document.querySelector('.startPage');
     const gameScreen = document.querySelector('.gamePage');
+    const gameOptions = document.querySelector('.gameOptions')
     
     // every time you click on the startPage button the following events will run
     playBtn.addEventListener('click', () => {
-      startScreen.classList.add('fadeOut'); // when somebody clicks a button on the start page we want to fade the game out
+      startScreen.classList.add('fadeOut'); // when somebody clicks a button on the start page we want to fade the start page out
+      gameScreen.classList.add('fadeIn');
+      gameOptions.classList.add('fadeIn');
+
     });
   };
 
