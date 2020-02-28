@@ -69,3 +69,4 @@ This project is licensed under the MIT License.
 * For hand- illustration art from [HiClipart](https://www.hiclipart.com/)
 * For info on Viewport Height in Css from [Sitepoint](https://www.sitepoint.com/css-viewport-units-quick-start/)
 * For inspiration on game structure from [Dev Ed](https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q)
+* For info on document.querySelector from [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
