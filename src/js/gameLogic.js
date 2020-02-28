@@ -13,7 +13,16 @@ const game = () => {
     
     // every time you click on the startPage button the following events will run
     playBtn.addEventListener('click', () => {
+      startScreen.classList.add('fadeOut'); // when somebody clicks a button on the start page we want to fade the game out
+    });
+  };
 
-    })
-  }
-}
+  // this calls/executes the inner functions
+  startGame();
+  updateScore();
+
+
+};
+
+// starts/executes the game function
+game();
