@@ -36,15 +36,24 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  opacity: 0; /* <--- This will need to change once the game- part is styled*/
 }
 
 .startPage h1 {
   font-size: 50px;
-
 }
 
-.startPage button,
+.startPage button { /* This button doesn't seem to listen to the cursor command?*/
+  width: 150px;
+  height: 50px;
+  background: none;
+  border: none;
+  color: rgb(236, 236, 236);
+  font-size: 20px;
+  background-color: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .gameOptions button {
   width: 150px;
   height: 50px;
@@ -54,6 +63,7 @@
   font-size: 20px;
   background-color: black;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .gamePage {
