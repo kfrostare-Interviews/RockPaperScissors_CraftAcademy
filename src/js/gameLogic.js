@@ -15,18 +15,17 @@ const game = () => {
     // every time you click on the startPage button the following events will run
     playBtn.addEventListener('click', () => {
       playBtn.classList.add('fadeOut')
-      startScreen.classList.add('fadeOut'); // when somebody clicks a button on the start page we want to fade the start page out
+      startScreen.classList.add('fadeOut');
       gameScreen.classList.add('fadeIn');
       gameOptions.classList.add('fadeIn');
     });
   };
 
-  // this calls/executes the inner functions
+  // this calls/executes the inner functions (needs to be commented out while running Cypress)
   // startGame();
   // updateScore();
 
-
 };
 
-// starts/executes the game function
+// starts/executes the game function (needs to be commented out while running Cypress)
 // game();
