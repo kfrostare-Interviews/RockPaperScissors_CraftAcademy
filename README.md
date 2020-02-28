@@ -1,6 +1,8 @@
 # Rock, Paper or Scissors?
 This game was created using JavaScript. One Paragraph of project description goes here
 
+## User Stories
+
 
 ## Getting started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.

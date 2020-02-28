@@ -22,11 +22,11 @@ const game = () => {
   };
 
   // this calls/executes the inner functions
-  startGame();
-  updateScore();
+  // startGame();
+  // updateScore();
 
 
 };
 
 // starts/executes the game function
-game();
+// game();
