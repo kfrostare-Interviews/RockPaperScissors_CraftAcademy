@@ -17,7 +17,6 @@ const game = () => {
       startScreen.classList.add('fadeOut'); // when somebody clicks a button on the start page we want to fade the start page out
       gameScreen.classList.add('fadeIn');
       gameOptions.classList.add('fadeIn');
-
     });
   };
 

@@ -43,7 +43,11 @@
   font-size: 50px;
 }
 
-.startPage button { /* This button doesn't seem to listen to the cursor command?*/
+.startPage p {
+  font-size: 35px;
+}
+
+.startOptions button {
   width: 150px;
   height: 50px;
   background: none;
