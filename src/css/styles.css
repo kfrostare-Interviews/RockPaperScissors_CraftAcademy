@@ -1,4 +1,4 @@
-/* Universal selector, regards all elements */
+/* logbook index #1 */
 *{
   margin: 0;
   padding: 0;
@@ -98,7 +98,7 @@
   transform: rotateY(180deg);
 }
 
-/* This will be for the start page to fade once a game has started */
+/* logbook index #1 */
 div.fadeOut {
   opacity: 0;
   pointer-events: none;

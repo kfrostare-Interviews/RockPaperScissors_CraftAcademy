@@ -1,0 +1,75 @@
+-- INDEX.HTML --
+
+1. Connecting my style sheet css to the page
+
+2. This is the start page
+
+3. This is the game page
+
+4. Connecting my logics- and user interface pages
+
+
+
+-- GAMELOGIC.JS --
+
+1. This function is/contains the whole game
+
+2. Here I put stuff I need multiple times
+
+3. This is the "start game"- function, it just fades the pages.
+   I make it its own constant because I'll only use it once.
+
+4. Every time you click on the startPage button the following 
+   events will run
+
+5. Play game function
+
+6. We need to give the player their options for buttons
+
+7. Now we're getting the player their images
+
+8. Now we're getting the computer's options and for this 
+   we are actually generating a random number between 1-3
+   that we will then associate to an image (rock, paper or scissors)
+
+9. We only want things to run after we click on one of the buttons, 
+   so let's bring them in
+
+10. This variable will be set equal to a random- function
+    the random- function by itself only generate a random 
+    number between 0-1, therefor we add * 3 to get three 
+    options to choose from but the function generates floats
+    which we do not need so if when wrapped in parenthesis and 
+    put 'math.floor' at the beginning it will convert to integers
+
+11. Computer choice turns the numbers into our rock, 
+    paper and scissors choices
+
+12. This is where we call compareHands, the function that 
+    declares a winner 
+
+13. This method picks images according to their names
+
+14. Now we need a comparison function so we know who is winning
+
+15. This variable has a function that updates the text
+
+16. This if- statement sets the rules for what happens when there is a time
+
+17. This if- statement sets the rules for when the player chooses rock
+
+18. This if- statement sets the rules for when the player chooses paper
+
+19. This if- statement sets the rules for when the player chooses scissors
+
+20. This executes the inner functions, needs to be commented out when running cypress
+
+21. This executes the game function, needs to be commented out when running cypress
+
+
+
+-- STYLE.CSS --
+
+1. This is the Universal selector, it regards all elements
+
+2. This will be for the start page to fade once a game has started
