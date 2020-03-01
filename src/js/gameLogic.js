@@ -39,23 +39,42 @@ const game = () => {
     // we only want things to run after we click on one of the buttons, so let's bring them in
     computerOptions.forEach((gameOptions) => {
       option.addEventListener('click', function(){
-        
-      })
-    })
+        // this variable will be set equal to a random- function
+        // the random- function by itself only generate a random number between 0-1
+        // therefor we add * 3 to get three options to choose from
+        // but the function generates floats which we do not need
+        // so if when wrapped in parenthesis and put 'math.floor' at the beginning it will convert to integers
+        const computerNumber = Math.floor(Math.random() * 3); // <--- Function that generates a random number between 1-3
+        // computer choice turns the numbers into our rock, paper and scissors choices
+        const computerChoice = computerOptions[computerNumber];
+        // this is where we call compareHands, the function that declares a winner 
 
-    // this variable will be set equal to a random- funcion
-    // the random- function by itself only generate a random number between 0-1
-    // therefor we add * 3 to get three options to choose from
-    // but the function generates floats which we do not need
-    // so if when wrapped in parenthesis and put 'math.floor' at the beginning it will convert to integers
-    const computerNumber = Math.floor(Math.random() * 3); // <--- Function that generates a random number between 1-3
+       
+      });
+    });
+  };
+
+  // now we need a comparison function so we know who is winning
+  const compareHands = (playerChoice, computerChoice) => {
+    // update text
+    const winner = document.querySelector('.winner');
     
+    // checking for a tie
+    if(playerChoice === computerChoice){
+        winner.textContent = 'It is a tie';
+        return;
+    }
+    if(playerChoice === 'rock'){
+      
+    }
+
   }
+
+
 
   // this calls/executes the inner functions 
   //(needs to be commented out while running Cypress)
   startGame();
-  updateScore();
   playMatch();
 
 };
