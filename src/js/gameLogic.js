@@ -49,6 +49,9 @@ const game = () => {
         const computerChoice = computerOptions[computerNumber];
         // this is where we call compareHands, the function that declares a winner 
 
+
+        // update images
+        playerHand.src = `./`
        
       });
     });
@@ -59,14 +62,45 @@ const game = () => {
     // update text
     const winner = document.querySelector('.winner');
     
-    // checking for a tie
+    // Rules for a tie
     if(playerChoice === computerChoice){
         winner.textContent = 'It is a tie';
         return;
     }
+    // Rules for user choosing Rock
     if(playerChoice === 'rock'){
-      
+      if(computerChoice === 'scissors'){
+        winner.textContent = 'player wins';
+        return;
+      }else{
+        winner.textContent = 'Computer wins';
+        return;
+      }
     }
+    // Rules for user choosing Paper
+    if(playerChoice === 'paper'){
+      if(computerChoice === 'scissors'){
+        winner.textContent = 'computer wins';
+        return;
+      }else{
+        winner.textContent = 'Player wins';
+        return;
+      }
+
+    }
+
+    // Rules for user choosing Scissors
+    if(playerChoice === 'scissors'){
+      if(computerChoice === 'rock'){
+        winner.textContent = 'computer wins';
+        return;
+      }else{
+        winner.textContent = 'Player wins';
+        return;
+      }
+
+    }
+
 
   }
 
