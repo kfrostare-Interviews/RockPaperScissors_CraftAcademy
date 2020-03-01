@@ -44,7 +44,6 @@ describe('User can navigate the Start Page', () => {
 			cy.get('.computerScore').should('contain', '0');
 		});
 
-
 		// Player can see avatars/icons
 		describe('player can see 5 icons/avatars on start page', () => {
 			
@@ -67,8 +66,6 @@ describe('User can navigate the Start Page', () => {
       it('displays oliver button', () => {
 				cy.get('.adi').should('contain', 'Adi');
 			});
-
-
 
 			// it('displays image dollar icons in score board', () => {
 			// 	cy.get('div[class="adiImage"]').find('img').should('be.visible');
