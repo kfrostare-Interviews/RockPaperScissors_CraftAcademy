@@ -51,8 +51,8 @@ const game = () => {
 
 
         // update images
-        playerHand.src = `./`
-       
+        playerHand.img = `./img/${this.textContent}.png`;
+        computerHand.img = `./img/${computerChoice}.png`;
       });
     });
   };
@@ -86,7 +86,6 @@ const game = () => {
         winner.textContent = 'Player wins';
         return;
       }
-
     }
 
     // Rules for user choosing Scissors
@@ -98,7 +97,6 @@ const game = () => {
         winner.textContent = 'Player wins';
         return;
       }
-
     }
 
 
@@ -108,7 +106,7 @@ const game = () => {
 
   // this calls/executes the inner functions 
   //(needs to be commented out while running Cypress)
-  startGame();
+  playGame();
   playMatch();
 
 };
