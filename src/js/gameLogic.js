@@ -25,6 +25,13 @@ const game = () => {
     const gameOptions = document.querySelectorAll(".gameOptions button"); // logbook index #6
     const playerHand = document.querySelector(".playerHand"); // logbook index #7
     const computerHand = document.querySelector(".computerHand");
+    const hands = document.querySelectorAll(".hands img");
+
+    hands.forEach(hand => {
+      hand.addEventListener("animationend", function(){
+        this.style.animation = "";
+      })
+    })
 
     const computerOptions = ["rock", "paper", "scissors"]; // logbook index #8
 
@@ -34,10 +41,16 @@ const game = () => {
         const computerNumber = Math.floor(Math.random() * 3); // logbook index #10
         const computerChoice = computerOptions[computerNumber]; // logbook index #11
 
-        compareHands(this.textContent, computerChoice); // logbook index #12
+        setTimeout(() => {
+          compareHands(this.textContent, computerChoice); // logbook index #12
 
-        playerHand.src = `./img/${this.textContent}.png`; // logbook index #13
-        computerHand.src = `./img/${computerChoice}.png`;
+          playerHand.src = `./img/${this.textContent}.png`; // logbook index #13
+          computerHand.src = `./img/${computerChoice}.png`;
+        }, 2000)
+
+        //animation
+        playerHand.style.animation = "shakePlayer 2s ease";
+        computerHand.style.animation = "shakeComputer 2s ease";
       });
     });
   };
