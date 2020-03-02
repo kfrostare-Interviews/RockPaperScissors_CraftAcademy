@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Play</title>
 
-    <!-- Connecting my stylesheet css to the page -->
-    <link rel="stylesheet" href="./css/styles.css" />
+    
+    <link rel="stylesheet" href="./css/styles.css" /><!-- logbook index #1 -->
   </head>
 
   <body>
@@ -25,22 +25,29 @@
         </div>
       </div>
       
-      <!-- This is the start page -->
-      <div class="startPage">
-        <h1>Rock Paper Scissors</h1>
-        <button>Pick a player</button>
+      
+      <div class="startPage"><!-- logbook index #2 -->
+        <h1 class="start">Rock Paper Scissors</h1>
+        <p>Pick a player!</p>
       </div>
 
-      <!-- This is the game page -->
-      <div class="gamePage">
-        <h2 class="winner">Choose an option</h2>
+      <div class="startOptions">
+        <button class="oliver">Oliver</button>
+        <button class="thomas">Thomas</button>
+        <button class="noel">Noel</button>
+        <button class="faraz">Faraz</button>
+        <button class="adi">Adi</button>
+      </div>
+
+      <div class="gamePage fadeOut"><!-- logbook index #3 -->
+        <h2 class="winner">Make your choice</h2>
         <div class="hands">
-          <img class="playerHand" src="./img/rockHand.png" alt="">  <!-- This needs to be rotated in css -->
-          <img class="computerHand" src="./img/rockHand.png" alt="">
+          <img class="playerHand" src="./img/rock.png" alt="">
+          <img class="computerHand" src="./img/rock.png" alt="">
         </div>
       </div>
 
-      <div class="gameOptions">
+      <div class="gameOptions fadeOut">
         <button class="rock">rock</button>
         <button class="paper">paper</button>
         <button class="scissors">scissors</button>
@@ -48,8 +55,7 @@
 
     </section>
 
-    <!-- Connecting my logics- and user interface pages -->
-    <script src="./js/gameLogic.js"></script>
+    <script src="./js/gameLogic.js"></script><!-- logbook index #4 -->
     <script src="./js/gameUI.js"></script>
   </body>
 </html>
