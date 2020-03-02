@@ -11,7 +11,7 @@ describe('User can navigate the Start Page', () => {
     });
     
     it('displays the Paragraph', () => {
-			cy.get('.startPage').should('contain', 'Pick a player!');
+			cy.get('.startPage p').should('contain', 'Are you ready?');
 		});
 
 		it('does not display game header', () => {
@@ -29,11 +29,11 @@ describe('User can navigate the Start Page', () => {
     // });
     
     it('displays Player title in score board', () => {
-			cy.get('.playerScore').should('contain', 'Player');
+			cy.get('.playerScore').should('contain', 'Student');
     });
     
     it('displays Player title in score board', () => {
-			cy.get('.computerScore').should('contain', 'Computer');
+			cy.get('.computerScore').should('contain', 'Coach');
 		});
 
 		it('displays score board starting on $0 for both players', () => {
@@ -45,66 +45,15 @@ describe('User can navigate the Start Page', () => {
 		});
 
 		// Player can see avatars/icons
-		describe('player can see 5 icons/avatars on start page', () => {
+		describe('player can see play- button', () => {
 			
-			it('displays oliver button', () => {
-				cy.get('.oliver').should('contain', 'Oliver');
+			it('displays player button', () => {
+				cy.get('.button').should('contain', 'Bring it on');
       });
-      
-      it('displays oliver button', () => {
-				cy.get('.thomas').should('contain', 'Thomas');
-      });
-      
-      it('displays oliver button', () => {
-				cy.get('.noel').should('contain', 'Noel');
-      });
-      
-      it('displays oliver button', () => {
-				cy.get('.faraz').should('contain', 'Faraz');
-      });
-      
-      it('displays oliver button', () => {
-				cy.get('.adi').should('contain', 'Adi');
-			});
 
 			// it('displays image dollar icons in score board', () => {
 			// 	cy.get('div[class="adiImage"]').find('img').should('be.visible');
 			// });
 		});
-
-
-		//Player can click avatars/icons
-		describe('player can click each icon/avatar and get to game page', () => {
-			
-			// it('displays profile icons/avatars below score board', () => {
-			// 	cy.get('div[class="oliverImage"]').click();
-			// 	cy.url().should('contain', 'game');
-			// 	cy.get('#makeChoice').should('contain', 'Make your choice');
-			// });
-
-			// it('displays profile icons/avatars below score board', () => {
-			// 	cy.get('div[class="thomasImage"]').click();
-			// 	cy.url().should('contain', 'game');
-			// 	cy.get('#makeChoice').should('contain', 'Make your choice');
-			// });
-
-			// it('displays profile icons/avatars below score board', () => {
-			// 	cy.get('div[class="farazImage"]').click();
-			// 	cy.url().should('contain', 'game');
-			// 	cy.get('#makeChoice').should('contain', 'Make your choice');
-			// });
-
-			// it('displays profile icons/avatars below score board', () => {
-			// 	cy.get('div[class="noelImage"]').click();
-			// 	cy.url().should('contain', 'game');
-			// 	cy.get('#makeChoice').should('contain', 'Make your choice');
-			// });
-
-			// it('displays profile icons/avatars below score board', () => {
-			// 	cy.get('div[class="adiImage"]').click();
-			// 	cy.url().should('contain', 'game');
-			// 	cy.get('#makeChoice').should('contain', 'Make your choice');
-			// });
-		});
 	});
-}); 
+});

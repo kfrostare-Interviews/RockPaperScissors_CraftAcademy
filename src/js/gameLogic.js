@@ -6,7 +6,8 @@ const game = () => {
 
   const startGame = () => {
     // logbook index #3
-    const playBtn = document.querySelector(".startOptions button");
+    const playBtn = document.querySelector(".startOptions");
+    const playBtn2 = document.querySelector(".startOptions button");
     const startScreen = document.querySelector(".startPage");
     const gameScreen = document.querySelector(".gamePage");
     const gameOptions = document.querySelector(".gameOptions");
@@ -14,6 +15,7 @@ const game = () => {
     playBtn.addEventListener("click", () => {
       // logbook index #4
       playBtn.classList.add("fadeOut");
+      playBtn2.classList.add("fadeOut");
       startScreen.classList.add("fadeOut");
       gameScreen.classList.add("fadeIn");
       gameOptions.classList.add("fadeIn");
@@ -76,12 +78,12 @@ const game = () => {
     if (playerChoice === "rock") {
       // logbook index #17
       if (computerChoice === "scissors") {
-        winner.textContent = "player wins";
+        winner.textContent = "Student wins";
         pScore++;
         UpdateScore();
         return;
       } else {
-        winner.textContent = "Computer wins";
+        winner.textContent = "Coach wins";
         cScore++;
         UpdateScore();
         return;
@@ -91,12 +93,12 @@ const game = () => {
     if (playerChoice === "paper") {
       // logbook index #18
       if (computerChoice === "scissors") {
-        winner.textContent = "computer wins";
+        winner.textContent = "Coach wins";
         cScore++;
         UpdateScore();
         return;
       } else {
-        winner.textContent = "Player wins";
+        winner.textContent = "Student wins";
         pScore++;
         UpdateScore();
         return;
@@ -106,12 +108,12 @@ const game = () => {
     if (playerChoice === "scissors") {
       // logbook index #19
       if (computerChoice === "rock") {
-        winner.textContent = "computer wins";
+        winner.textContent = "Coach wins";
         cScore++;
         UpdateScore();
         return;
       } else {
-        winner.textContent = "Player wins";
+        winner.textContent = "Student wins";
         pScore++;
         UpdateScore();
         return;
