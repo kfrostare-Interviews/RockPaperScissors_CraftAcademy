@@ -11,7 +11,7 @@ const game = () => {
     const gameScreen = document.querySelector(".gamePage");
     const gameOptions = document.querySelector(".gameOptions");
 
-    playBtn.addEventListener('click', () => {
+    playBtn.addEventListener("click", () => {
       // logbook index #4
       playBtn.classList.add("fadeOut");
       startScreen.classList.add("fadeOut");
@@ -25,21 +25,27 @@ const game = () => {
     const gameOptions = document.querySelectorAll(".gameOptions button"); // logbook index #6
     const playerHand = document.querySelector(".playerHand"); // logbook index #7
     const computerHand = document.querySelector(".computerHand");
-    
 
     const computerOptions = ["rock", "paper", "scissors"]; // logbook index #8
 
     gameOptions.forEach(option => {
-      option.addEventListener("click", function() { // logbook index #9
+      option.addEventListener("click", function() {
+        // logbook index #9
         const computerNumber = Math.floor(Math.random() * 3); // logbook index #10
         const computerChoice = computerOptions[computerNumber]; // logbook index #11
-        
-        // logbook index #12
+
+        compareHands(this.textContent, computerChoice); // logbook index #12
 
         playerHand.src = `./img/${this.textContent}.png`; // logbook index #13
         computerHand.src = `./img/${computerChoice}.png`;
       });
     });
+  };
+
+  //time to update the score
+  const UpdateScore = () => {
+    const playerScore = document.querySelector(".playerScore p");
+    const computerScore = document.querySelector(".computerScore p");
   };
 
   const compareHands = (playerChoice, computerChoice) => {
