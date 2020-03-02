@@ -1,7 +1,7 @@
 {
   "name": "rock_paper_scissors",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js", //changed from index to server.js
   "repository": "git@github.com:kfrostare/RockPaperScissors_CraftAcademy.git",
   "author": "karolina <karolina.frostare@gmail.com>",
   "license": "MIT",
