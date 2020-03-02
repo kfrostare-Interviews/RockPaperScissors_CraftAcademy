@@ -42,10 +42,12 @@ const game = () => {
     });
   };
 
-  //time to update the score
+  //time to update the scoreboard
   const UpdateScore = () => {
     const playerScore = document.querySelector(".playerScore p");
     const computerScore = document.querySelector(".computerScore p");
+    playerScore.textContent = pScore;
+    computerScore.textContent = cScore;
   };
 
   const compareHands = (playerChoice, computerChoice) => {
@@ -62,9 +64,11 @@ const game = () => {
       // logbook index #17
       if (computerChoice === "scissors") {
         winner.textContent = "player wins";
+        pScore++;
         return;
       } else {
         winner.textContent = "Computer wins";
+        cScore++;
         return;
       }
     }
@@ -73,9 +77,11 @@ const game = () => {
       // logbook index #18
       if (computerChoice === "scissors") {
         winner.textContent = "computer wins";
+        cScore++;
         return;
       } else {
         winner.textContent = "Player wins";
+        pScore++;
         return;
       }
     }
@@ -84,9 +90,11 @@ const game = () => {
       // logbook index #19
       if (computerChoice === "rock") {
         winner.textContent = "computer wins";
+        cScore++;
         return;
       } else {
         winner.textContent = "Player wins";
+        pScore++;
         return;
       }
     }
