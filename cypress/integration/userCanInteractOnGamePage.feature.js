@@ -1,51 +1,73 @@
-// Player can interact with game page 
-describe('User can navigate the Game page', () => {
-    beforeEach(() => {
-        cy.visit("http://localhost:3001");
-        cy.get('div[class="startOptions button"]').click();
-	  })
-    
-    describe('user can see the game page and'), () => {
+describe('User can navigate the Game Page', () => {
+	beforeEach(() => {
+    cy.visit('http://localhost:3001')
+    cy.get('.button').contains('Bring it on').click()
+	})
 
-      it('displays the "Make your choice" title', () => {
-			  cy.get('#winner').should('contain', 'Make your choice');
-		  });
-
-      it('does not display start header', () => {
-        cy.get('#startOptions').should('not.exist');
-      });
-
-      // it('displays background image', () => {
-      //   cy.route('.imageURL').as('image');
-      //   cy.wait('@image') // Don't really get what this does...
-      //   cy.get('.bg-hero').should('be.visible'); //.bg-hero is that a name or a pre-set cypress syntax command??
-      // });
-
-      // it('displays image dollar icons in score board', () => {
-      //   cy.get('div[class="dollarImage"]').find('img').should('be.visible');
-      // });
-
-      // it('displays score board starting on $500 for player', ('topLeft') => {
-      //   cy.get('#playerScore').should('contain', '500');
-      // });
-
-      // it('displays score board starting on $500 for computer', ('topRight') => {
-      //   cy.get('#computerScore').should('contain', '500');
-      // });
-      
-      it('displays the player hand', () => {
-			  cy.get('#playerHand').should('be.visible');
-		  });
-
-      it('displays the computer hand', () => {
-			  cy.get('#computerHand').should('be.visible');
-		  });
-
-      it('displays buttons for rock, paper, scissors', () => {
-        cy.get('#rock').find('button').should('be.visible'); 
-        cy.get('#paper').find('button').should('be.visible');
-        cy.get('#scissors').find('button').should('be.visible');
-      });
-
+	describe('user can see the game page and it', () => {
+				
+		it('displays the game title', () => {
+			cy.get('.winner').should('contain', 'Make your choice');
     });
+
+    it('displays the player hand', () => {
+      cy.get('.playerHand').should('be.visible')
+    });
+
+    it('displays the computer hand', () => {
+      cy.get('.computerHand').should('be.visible')
+    });
+
+    it('displays the rock- button', () => {
+      cy.get('.rock .btn').should('contain', 'Rock')
+    });
+
+    it('displays the paper- button', () => {
+      cy.get('.paper .btn').should('contain', 'Paper')
+    });
+
+    it('displays the scissors- button', () => {
+      cy.get('.scissors .btn').should('contain', 'Scissors')
+    });
+
+    it('displays Player title in score board', () => {
+			cy.get('.playerScore').should('contain', 'Student');
+    });
+    
+    it('displays Player title in score board', () => {
+			cy.get('.computerScore').should('contain', 'Coach');
+		});
+
+		it('displays score board starting on $0 for both players', () => {
+			cy.get('.playerScore').should('contain', '0');
+		});
+
+		it('displays score board starting on $0 for both players', () => {
+			cy.get('.computerScore').should('contain', '0');
+		});
+  });
+
+  describe('user can click the buttons and it', () => {
+	
+  )};
+  
+  describe('user should not be able to see the start page', () => {
+
+    it('does not display start title', () => {
+			cy.get('#startPage').should('not.be.visible');
+    });
+    
+    it('does not display start header', () => {
+			cy.get('#start').should('not.be.visible');
+    });
+    
+    it('does not display start button', () => {
+			cy.get('#button').should('not.be.visible');
+		});
+
+    it('does not display game header', () => {
+			cy.get('#start').should('not.be.visible');
+		});
+  });
+
 });
