@@ -6,8 +6,7 @@ const game = () => {
 
   const startGame = () => {
     // logbook index #3
-    const playBtn = document.querySelector(".startOptions");
-    const playBtn2 = document.querySelector(".startOptions button");
+    const playBtn = document.querySelector(".startOptions button");
     const startScreen = document.querySelector(".startPage");
     const gameScreen = document.querySelector(".gamePage");
     const gameOptions = document.querySelector(".gameOptions");
@@ -15,7 +14,6 @@ const game = () => {
     playBtn.addEventListener("click", () => {
       // logbook index #4
       playBtn.classList.add("fadeOut");
-      playBtn2.classList.add("fadeOut");
       startScreen.classList.add("fadeOut");
       gameScreen.classList.add("fadeIn");
       gameOptions.classList.add("fadeIn");
@@ -71,7 +69,7 @@ const game = () => {
 
     if (playerChoice === computerChoice) {
       // logbook index #16
-      winner.textContent = "It is a tie";
+      winner.textContent = "It's a tie";
       return;
     }
 

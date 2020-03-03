@@ -19,15 +19,15 @@ describe('User can navigate the Game Page', () => {
     });
 
     it('displays the rock- button', () => {
-      cy.get('.rock .btn').should('contain', 'Rock')
+      cy.get('.rock').should('contain', 'rock')
     });
 
     it('displays the paper- button', () => {
-      cy.get('.paper .btn').should('contain', 'Paper')
+      cy.get('.paper').should('contain', 'paper')
     });
 
     it('displays the scissors- button', () => {
-      cy.get('.scissors .btn').should('contain', 'Scissors')
+      cy.get('.scissors').should('contain', 'scissors')
     });
 
     it('displays Player title in score board', () => {
@@ -47,27 +47,25 @@ describe('User can navigate the Game Page', () => {
 		});
   });
 
-  describe('user can click the buttons and it', () => {
-	
-  )};
-  
-  describe('user should not be able to see the start page', () => {
-
-    it('does not display start title', () => {
-			cy.get('#startPage').should('not.be.visible');
-    });
+  describe('user can click the buttons and', () => {
     
-    it('does not display start header', () => {
-			cy.get('#start').should('not.be.visible');
+    it('the original title should change', () => {
+      cy.get('.rock').contains('rock').click()
+      cy.wait(500)
+      cy.get('.winner').should('not.contain', 'Make your choice')
     });
-    
-    it('does not display start button', () => {
-			cy.get('#button').should('not.be.visible');
-		});
 
-    it('does not display game header', () => {
-			cy.get('#start').should('not.be.visible');
-		});
+    it('the original title should change', () => {
+      cy.get('.paper').contains('paper').click()
+      cy.wait(500)
+      cy.get('.winner').should('not.contain', 'Make your choice')
+    });
+
+    it('the original title should change', () => {
+      cy.get('.scissors').contains('scissors').click()
+      cy.wait(500)
+      cy.get('.winner').should('not.contain', 'Make your choice')
+    });
   });
 
 });
