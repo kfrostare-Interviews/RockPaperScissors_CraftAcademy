@@ -1,54 +1,59 @@
 const game = () => {
-  // logbook index #1
-  // logbook index #2
   let pScore = 0;
   let cScore = 0;
 
+  // Fades parts of the page
   const startGame = () => {
-    // logbook index #3
     const playBtn = document.querySelector(".startOptions");
-    const playBtn2 = document.querySelector(".startOptions button");
+    const playBtnClass = document.querySelector(".startOptions button");
     const startScreen = document.querySelector(".startPage");
     const gameScreen = document.querySelector(".gamePage");
     const gameOptions = document.querySelector(".gameOptions");
 
     playBtn.addEventListener("click", () => {
-      // logbook index #4
       playBtn.classList.add("fadeOut");
-      playBtn2.classList.add("fadeOut");
+      playBtnClass.classList.add("fadeOut");
       startScreen.classList.add("fadeOut");
       gameScreen.classList.add("fadeIn");
       gameOptions.classList.add("fadeIn");
     });
   };
 
+  // Activates the game features
   const playGame = () => {
-    // logbook index #5
-    const gameOptions = document.querySelectorAll(".gameOptions button"); // logbook index #6
-    const playerHand = document.querySelector(".playerHand"); // logbook index #7
+    const gameOptions = document.querySelectorAll(".gameOptions button");
+    const playerHand = document.querySelector(".playerHand");
     const computerHand = document.querySelector(".computerHand");
     const hands = document.querySelectorAll(".hands img");
 
+    // Hand animation
     hands.forEach(hand => {
-      hand.addEventListener("animationend", function(){
+      hand.addEventListener("animationend", function() {
         this.style.animation = "";
-      })
-    })
+      });
+    });
 
-    const computerOptions = ["rock", "paper", "scissors"]; // logbook index #8
+    // The computer's options is an array of 3 strings
+    const computerOptions = ["rock", "paper", "scissors"];
 
+    // Listens after click on any of the three buttons
     gameOptions.forEach(option => {
       option.addEventListener("click", function() {
-        // logbook index #9
-        const computerNumber = Math.floor(Math.random() * 3); // logbook index #10
-        const computerChoice = computerOptions[computerNumber]; // logbook index #11
+        // "random" only generates btw 0-1, so we add 3
+        // math.floor turns floats into integers
+        const computerNumber = Math.floor(Math.random() * 3);
 
+        // turns our chosen number into either rock, paper or scissors
+        const computerChoice = computerOptions[computerNumber];
+
+        // compareHands is the function that declares a winner
         setTimeout(() => {
-          compareHands(this.textContent, computerChoice); // logbook index #12
+          compareHands(this.textContent, computerChoice);
 
-          playerHand.src = `./img/${this.textContent}.png`; // logbook index #13
+          // this function picks images according to their names
+          playerHand.src = `./img/${this.textContent}.png`;
           computerHand.src = `./img/${computerChoice}.png`;
-        }, 2000)
+        }, 2000);
 
         //animation
         playerHand.style.animation = "shakePlayer 2s ease";
@@ -57,7 +62,7 @@ const game = () => {
     });
   };
 
-  //time to update the scoreboard
+  // this updates the scoreboard
   const UpdateScore = () => {
     const playerScore = document.querySelector(".playerScore p");
     const computerScore = document.querySelector(".computerScore p");
@@ -65,18 +70,17 @@ const game = () => {
     computerScore.textContent = cScore;
   };
 
+  // this method is the game rules
   const compareHands = (playerChoice, computerChoice) => {
-    // logbook index #14
-    const winner = document.querySelector(".winner"); // logbook index #15
+    // this function declares a winner (changes the winner- text)
+    const winner = document.querySelector(".winner");
 
     if (playerChoice === computerChoice) {
-      // logbook index #16
-      winner.textContent = "It is a tie";
+      winner.textContent = "It's a tie";
       return;
     }
 
     if (playerChoice === "rock") {
-      // logbook index #17
       if (computerChoice === "scissors") {
         winner.textContent = "Student wins";
         pScore++;
@@ -91,7 +95,6 @@ const game = () => {
     }
 
     if (playerChoice === "paper") {
-      // logbook index #18
       if (computerChoice === "scissors") {
         winner.textContent = "Coach wins";
         cScore++;
@@ -106,7 +109,6 @@ const game = () => {
     }
 
     if (playerChoice === "scissors") {
-      // logbook index #19
       if (computerChoice === "rock") {
         winner.textContent = "Coach wins";
         cScore++;
@@ -121,8 +123,10 @@ const game = () => {
     }
   };
 
-  startGame(); // logbook index #20
+  // executes inner functions of the game
+  startGame();
   playGame();
 };
 
-game(); // logbook index #21
+// executes the game function
+game();

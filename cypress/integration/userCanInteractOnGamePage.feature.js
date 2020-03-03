@@ -1,86 +1,71 @@
-// Player can interact with game page 
-describe('User can navigate the Game page', () => {
-    beforeEach(() => {
-        cy.visit("http://localhost:3001");
-        cy.get('div[class="oliverImage"]').click();
-	  })
+describe('User can navigate the Game Page', () => {
+	beforeEach(() => {
+    cy.visit('http://localhost:3001')
+    cy.get('.button').contains('Bring it on').click()
+	})
+
+	describe('user can see the game page and it', () => {
+				
+		it('displays the game title', () => {
+			cy.get('.winner').should('contain', 'Make your choice');
+    });
+
+    it('displays the player hand', () => {
+      cy.get('.playerHand').should('be.visible')
+    });
+
+    it('displays the computer hand', () => {
+      cy.get('.computerHand').should('be.visible')
+    });
+
+    it('displays the rock- button', () => {
+      cy.get('.rock').should('contain', 'rock')
+    });
+
+    it('displays the paper- button', () => {
+      cy.get('.paper').should('contain', 'paper')
+    });
+
+    it('displays the scissors- button', () => {
+      cy.get('.scissors').should('contain', 'scissors')
+    });
+
+    it('displays Player title in score board', () => {
+			cy.get('.playerScore').should('contain', 'Student');
+    });
     
-    describe('user can see the game page and'), () => {
+    it('displays Player title in score board', () => {
+			cy.get('.computerScore').should('contain', 'Coach');
+		});
 
-      it('displays the "Make your choice" title', () => {
-			  cy.get('#makeChoice').should('contain', 'Make your choice');
-		  });
+		it('displays score board starting on $0 for both players', () => {
+			cy.get('.playerScore').should('contain', '0');
+		});
 
-      it('displays component name in url', () => {
-        cy.url().should('contain', 'game');
-      })
+		it('displays score board starting on $0 for both players', () => {
+			cy.get('.computerScore').should('contain', '0');
+		});
+  });
 
-      it('does not display start header', () => {
-        cy.get('#pickPlayer').should('not.exist');
-      });
-
-      it('displays background image', () => {
-        cy.route('.imageURL').as('image');
-        cy.wait('@image') // Don't really get what this does...
-        cy.get('.bg-hero').should('be.visible'); //.bg-hero is that a name or a pre-set cypress syntax command??
-      });
-
-      it('displays image dollar icons in score board', () => {
-        cy.get('div[class="dollarImage"]').find('img').should('be.visible');
-      });
-
-      it('displays score board starting on $500 for player', ('topLeft') => {
-        cy.get('#playerScore').should('contain', '500');
-      });
-
-      it('displays score board starting on $500 for computer', ('topRight') => {
-        cy.get('#computerScore').should('contain', '500');
-      });
-        
-      it('displays left hand icon below score board', ('left') => {
-        cy.get('div[class="leftHandImage"]').find('img').should('be.visible');
-      });
-
-      it('displays right hand icon below score board', ('right') => {
-        cy.get('div[class="rightHandImage"]').find('img').should('be.visible');
-      });
-
-      it('displays player avatar on left hand side', ('left') => {
-        cy.get('div[class="oliverImage"]').find('img').should('be.visible');
-      });
-
-      it('displays computer avatar on right hand side', ('right') => {
-        cy.get('div[class="noelImage"]').find('img').should('be.visible');
-        // How to tell Cypress it could be any of the four other avatars but not Oliver?!
-      });
-
-      it('displays buttons for rock, paper, scissors', () => {
-        cy.get('#rockButton').find('button').should('be.visible'); 
-        cy.get('#paperButton').find('button').should('be.visible');
-        cy.get('#scissorsButton').find('button').should('be.visible');
-      });
-
-    };
-
-    describe('user can see the game in action and'), () => {
-        beforeEach(() => {
-        cy.visit("http://localhost:3001");
-        cy.get('div[class="oliverImage"]').click();
-        cy.contains('#rockButton').click('center');
-      });
-      
-      it('the score board change for both players', () => {
-        cy.expect('#computerScore').to.not.be('500');
-        cy.expect('#playerScore').to.not.be('500');
-      });
-
-      it('player can see computer hand change', () => {
-        cy.expect('#playerScore').to.not.be('500');
-      })
-
-      it('player can see massage "you owe x money, if loses', () => {})
-      it('player can see massage "you owe x money, if loses', () => {})
-      it('player can keep playing until they win computers- or lose their own money', () => {})
+  describe('user can click the buttons and', () => {
     
-    };
-)};
+    it('the original title should change', () => {
+      cy.get('.rock').contains('rock').click()
+      cy.wait(500)
+      cy.get('.winner').should('not.contain', 'Make your choice')
+    });
+
+    it('the original title should change', () => {
+      cy.get('.paper').contains('paper').click()
+      cy.wait(500)
+      cy.get('.winner').should('not.contain', 'Make your choice')
+    });
+
+    it('the original title should change', () => {
+      cy.get('.scissors').contains('scissors').click()
+      cy.wait(500)
+      cy.get('.winner').should('not.contain', 'Make your choice')
+    });
+  });
+
+});

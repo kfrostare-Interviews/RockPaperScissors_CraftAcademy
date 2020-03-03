@@ -44,16 +44,12 @@ describe('User can navigate the Start Page', () => {
 			cy.get('.computerScore').should('contain', '0');
 		});
 
-		// Player can see avatars/icons
 		describe('player can see play- button', () => {
 			
 			it('displays player button', () => {
 				cy.get('.button').should('contain', 'Bring it on');
       });
 
-			// it('displays image dollar icons in score board', () => {
-			// 	cy.get('div[class="adiImage"]').find('img').should('be.visible');
-			// });
 		});
 	});
 });
