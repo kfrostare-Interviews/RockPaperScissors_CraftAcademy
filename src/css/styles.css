@@ -1,4 +1,4 @@
-/* logbook index #1 */
+/* Universal selector, all elements #1 */
 *{
   margin: 0;
   padding: 0;
@@ -112,7 +112,7 @@ body {
   transform: rotateY(180deg);
 }
 
-/* logbook index #1 */
+/* the startpage to fade once game is started */
 div.fadeOut {
   opacity: 0;
   pointer-events: none;
@@ -123,6 +123,7 @@ div.fadeIn {
   pointer-events: all;
 }
 
+/* Animation of player/computer hands */
 @keyframes shakePlayer {
   0%{
     transform: translateY(0px);
