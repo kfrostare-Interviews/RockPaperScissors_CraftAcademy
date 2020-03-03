@@ -28,10 +28,10 @@ const game = () => {
 
     // Hand animation
     hands.forEach(hand => {
-      hand.addEventListener("animationend", function(){
+      hand.addEventListener("animationend", function() {
         this.style.animation = "";
-      })
-    })
+      });
+    });
 
     // The computer's options is an array of 3 strings
     const computerOptions = ["rock", "paper", "scissors"];
@@ -39,22 +39,21 @@ const game = () => {
     // Listens after click on any of the three buttons
     gameOptions.forEach(option => {
       option.addEventListener("click", function() {
-        
         // "random" only generates btw 0-1, so we add 3
         // math.floor turns floats into integers
         const computerNumber = Math.floor(Math.random() * 3);
-        
+
         // turns our chosen number into either rock, paper or scissors
         const computerChoice = computerOptions[computerNumber];
 
         // compareHands is the function that declares a winner
         setTimeout(() => {
           compareHands(this.textContent, computerChoice);
-          
+
           // this function picks images according to their names
           playerHand.src = `./img/${this.textContent}.png`;
           computerHand.src = `./img/${computerChoice}.png`;
-        }, 2000)
+        }, 2000);
 
         //animation
         playerHand.style.animation = "shakePlayer 2s ease";
