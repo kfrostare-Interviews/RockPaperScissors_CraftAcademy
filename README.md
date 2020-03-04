@@ -80,3 +80,4 @@ https://devcenter.heroku.com/articles/procfile
 https://devcenter.heroku.com/articles/error-codes
 https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment#3-add-a-procfile 
 https://www.youtube.com/watch?v=AZNFox2CvBk
+updates and now everything should be fine
