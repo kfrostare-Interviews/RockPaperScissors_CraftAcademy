@@ -105,11 +105,13 @@ body {
   margin: 0px;
   justify-content: space-around;
   align-items: center;
+  
 }
 
 .gameOptions {
   align-items: center;
   margin-left: 75vh;
+  padding-top: 50px;
 }
 
 .computerHand {
