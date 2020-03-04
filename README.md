@@ -76,3 +76,4 @@ This project is licensed under the MIT License.
 * For info on document.querySelector from [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 * For info on deploying a game to Heroku [SolidCode](https://www.youtube.com/watch?v=gX8HCul9cFg)
 https://medium.com/@winnieliang/how-to-run-a-simple-html-css-javascript-application-on-heroku-4e664c541b0b
+https://www.youtube.com/watch?v=Rz886HkV1j4
