@@ -39,6 +39,7 @@ const game = () => {
     // Listens after click on any of the three buttons
     gameOptions.forEach(option => {
       option.addEventListener("click", function() {
+        
         // "random" only generates btw 0-1, so we add 3
         // math.floor turns floats into integers
         const computerNumber = Math.floor(Math.random() * 3);
