@@ -74,3 +74,9 @@ This project is licensed under the MIT License.
 * For inspiration on game structure from [freeCodeCamp.org](https://www.youtube.com/watch?v=jaVNP3nIAv0)
 * For inspiration on game structure from [Dylan Israel](https://www.youtube.com/watch?v=liMNNZuWZwY)
 * For info on document.querySelector from [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+https://www.youtube.com/watch?v=gX8HCul9cFg
+https://www.youtube.com/watch?v=Rz886HkV1j4
+https://devcenter.heroku.com/articles/procfile
+https://devcenter.heroku.com/articles/error-codes
+https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment#3-add-a-procfile 
+https://www.youtube.com/watch?v=AZNFox2CvBk
