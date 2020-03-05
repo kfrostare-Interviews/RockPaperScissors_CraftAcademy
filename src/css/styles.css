@@ -5,10 +5,6 @@
   box-sizing: border-box;
 }
 
-body {
-  
-}
-
 .gameHouse {
   height: 100vh;
   background-image: url(/img/orange-1247700.jpg);

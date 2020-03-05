@@ -47,9 +47,25 @@ describe('User chooses to go with the Sad Path', () => {
     });
   });
 
+  // Player tries to edit score board
+  describe('player tries to edit score board', () {
+    beforeEach
+
+    it('does not display the start title', () => {
+      cy.get('.start').should('not.be.visible')
+    });
+
+    it('does not display the start paragraph', () => {
+      cy.get('.startPage p').should('not.be.visible')
+    });
+
+    it('does not display the start button', () => {
+      cy.get('.button').should('not.be.visible')
+    });
+  });
+
 })
 
-    it('player can see game- page, not any other page ', () => {})
     it('player tries to click on score board', () => {})
     it('player tries to click on two options for player at the same time', () => {})
     it('player tries to click on two options for rock, paper, scissors at the same time', () => {})

@@ -5,7 +5,11 @@ describe('User can navigate the Start Page', () => {
 	})
 
 	describe('user can see the start page and it', () => {
-				
+    
+    it('displays the background image', () => {
+      cy.get('.gameHouse').should('have.css', 'background-image', 'url(/img/orange-1247700.jpg)')		
+    })
+
 		it('displays the Title', () => {
 			cy.get('.start').should('contain', 'Rock Paper Scissors');
     });
@@ -17,16 +21,6 @@ describe('User can navigate the Start Page', () => {
 		it('does not display game header', () => {
 			cy.get('#winner').should('not.exist');
 		});
-
-		// it('displays background image', () => {
-		// 	cy.route('.imageURL').as('image');
-		// 	cy.wait('@image')
-		// 	cy.get('.bg-hero').should('be.visible');
-		// });
-
-		// it('displays image dollar icons in score board', () => {
-		// 	cy.get('div[class="dollarImage"]').find('img').should('be.visible');
-    // });
     
     it('displays Player title in score board', () => {
 			cy.get('.playerScore').should('contain', 'Student');

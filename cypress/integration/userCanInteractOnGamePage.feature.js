@@ -5,7 +5,11 @@ describe('User can navigate the Game Page', () => {
 	})
 
 	describe('user can see the game page and it', () => {
-				
+    
+    it('displays the background image', () => {
+      cy.get('.gameHouse').should('have.css', 'background-image', 'url(/img/orange-1247700.jpg)')		
+    })
+
 		it('displays the game title', () => {
 			cy.get('.winner').should('contain', 'Make your choice');
     });
