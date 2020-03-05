@@ -7,7 +7,7 @@
 
 .gameHouse {
   height: 100vh;
-  background-image: url(./orange-1247700.jpg);
+  background-image: url(orange-1247700.jpg);
   margin: 0;
   /* background-attachment: fixed; */
   background-position: center;
@@ -106,7 +106,7 @@
 
 .gameOptions {
   align-items: center;
-  margin-left: 75vh;
+  margin-left: 70vh;
   padding-top: 50px;
 }
 
