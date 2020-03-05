@@ -121,7 +121,7 @@ const game = () => {
         UpdateScore();
         return;
       }
-    }
+    }    
   };
 
   // executes inner functions of the game
