@@ -52,8 +52,8 @@ const game = () => {
           compareHands(this.textContent, computerChoice);
 
           // this function picks images according to their names
-          playerHand.src = `./img/${this.textContent}.png`;
-          computerHand.src = `./img/${computerChoice}.png`;
+          playerHand.src = `./${this.textContent}.png`;
+          computerHand.src = `./${computerChoice}.png`;
         }, 2000);
 
         //animation
