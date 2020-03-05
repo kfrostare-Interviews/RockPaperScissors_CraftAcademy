@@ -1,17 +1,17 @@
 describe('User can navigate the Game Page', () => {
 	beforeEach(() => {
-    cy.visit('http://localhost:3001')
+    cy.visit('https://kfrostare-rpscraftacademy.netlify.com/')
     cy.get('.button').contains('Bring it on').click()
 	})
 
 	describe('user can see the game page and it', () => {
     
     it('displays the background image', () => {
-      cy.get('.gameHouse').should('have.css', 'background-image', 'url("http://localhost:3001/img/orange-1247700.jpg")')		
+      cy.get('.gameHouse').should('have.css', 'background-image', 'url("https://kfrostare-rpscraftacademy.netlify.com/orange-1247700.jpg")')		
     })
 
 		it('displays the game title', () => {
-			cy.get('.winner').should('contain', 'Make your choice');
+			cy.get('.winner').should('contain', 'Make your move');
     });
 
     it('displays the player hand', () => {

@@ -57,3 +57,13 @@ In order to keep track of the score
 I need the score to update automatically after each run
 
 ```
+
+# The following user stories have yet to be realized
+
+**User can play best out of 5**
+
+**User can bet money**
+
+**User can pick a player**
+
+**User can send a victory message**

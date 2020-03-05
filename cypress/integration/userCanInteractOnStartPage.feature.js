@@ -1,13 +1,13 @@
 // Player can interact with start page
 describe('User can navigate the Start Page', () => {
 	beforeEach(() => {
-		cy.visit('http://localhost:3001');
+		cy.visit('https://kfrostare-rpscraftacademy.netlify.com/');
 	})
 
 	describe('user can see the start page and it', () => {
     
     it('displays the background image', () => {
-      cy.get('.gameHouse').should('have.css', 'background-image', 'url("http://localhost:3001/img/orange-1247700.jpg")')		
+      cy.get('.gameHouse').should('have.css', 'background-image', 'url("https://kfrostare-rpscraftacademy.netlify.com/orange-1247700.jpg")')		
     })
 
 		it('displays the Title', () => {

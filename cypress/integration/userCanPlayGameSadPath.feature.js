@@ -1,6 +1,6 @@
 describe('User chooses to go with the Sad Path', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3001')
+    cy.visit('https://kfrostare-rpscraftacademy.netlify.com/')
   })
 
   // Making sure start page displays the start page

@@ -29,9 +29,12 @@ This project comes with three tests already made, that you can modify to your li
 Add additional notes about how to deploy this on a live system
 
 ### This game was built using
-* Javascript, html and css for style and logic. Yarn and Superstatic as dependency. Tested using Cypress.
+* Javascript for logic, html for structure and css for style. Yarn and Superstatic as dependencies. Tested using Cypress.
 
-## Acknowledgments
+### Updates to be made
+View upcoming updates in the userstories.md- file. 
+
+### Acknowledgments
 
 * For info on testing for images [Cypress](https://stackoverflow.com/questions/51246606/test-loading-of-image-in-cypress)
 * For info on section tags from [GeeksforGeeks](https://www.geeksforgeeks.org/html-section-tag/)
