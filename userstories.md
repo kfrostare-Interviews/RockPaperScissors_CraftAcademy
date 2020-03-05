@@ -58,12 +58,35 @@ I need the score to update automatically after each run
 
 ```
 
-# The following user stories have yet to be realized
+# User stories yet to be realized
 
 **User can play best out of 5**
-
+```
+As a player
+In order to know when the game is over
+I'd like to play until any of the players gets 5 points
+```
 **User can bet money**
-
+```
+As a player
+In order to feel like something's at stake
+I'd like to see a money symbol next to the score board
+```
 **User can pick a player**
-
+```
+As a player
+In order to make the game more interesting
+I'd like to be able to pick a player
+```
+**User can pick opponent**
+```
+As a player
+In order to make the game more interesting
+I'd like to be able to pick my opponent
+```
 **User can send a victory message**
+```
+As a player
+When I win a game
+I'd like to be able to send a victory e-mail to my opponent
+```
