@@ -1,4 +1,4 @@
-# Tech Interview Challenge: Rock/Paper/Scissors
+# Tech Interview Challenge: Rock/Paper/Scissors [![Netlify Status](https://api.netlify.com/api/v1/badges/52c0a246-4958-4a02-980c-a3d41e4b5013/deploy-status)](https://app.netlify.com/sites/kfrostare-rpscraftacademy/deploys)
 This game was part of a tech Interview for [Craft Academy](https://www.craftacademy.se/english/). It was built in vanilla Javascript by [Karolina Frostare](https://github.com/kfrostare) with game layout/structure from [developer Edwin](https://github.com/developedbyed). More on that in acknowledgements at the bottom of this ReadMe file.
 
 ![Rock, paper or scissors screenshot](src/img/rps_screenshot.png)
