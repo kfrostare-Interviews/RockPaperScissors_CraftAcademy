@@ -56,19 +56,19 @@ describe('User can navigate the Game Page', () => {
     it('the original title should change', () => {
       cy.get('.rock').contains('rock').click()
       cy.wait(500)
-      cy.get('.winner').should('not.contain', 'Make your choice')
+      cy.get('.winner').should('not.contain', 'Make your move')
     });
 
     it('the original title should change', () => {
       cy.get('.paper').contains('paper').click()
       cy.wait(500)
-      cy.get('.winner').should('not.contain', 'Make your choice')
+      cy.get('.winner').should('not.contain', 'Make your move')
     });
 
     it('the original title should change', () => {
       cy.get('.scissors').contains('scissors').click()
       cy.wait(500)
-      cy.get('.winner').should('not.contain', 'Make your choice')
+      cy.get('.winner').should('not.contain', 'Make your move')
     });
   });
 

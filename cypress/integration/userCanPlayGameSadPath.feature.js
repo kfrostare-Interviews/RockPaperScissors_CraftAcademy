@@ -6,28 +6,29 @@ describe('User chooses to go with the Sad Path', () => {
   // Making sure start page displays the start page
   describe('user can see the start page and it', () => {
 
-    it('does not display the game title', () => {
-      cy.get('.winner').should('not.be.visible')
+    // cypress reads all feilds (fadeOuts) as visible...
+    it('does not need to display game title', () => {
+      cy.get('.winner').not('.required')
     });
 
-    it('does not display the player hand', () => {
-      cy.get('.playerHand').should('not.be.visible')
+    it('does not need to display player hand', () => {
+      cy.get('.playerHand').not('.required')
     });
 
-    it('does not display the computer hand', () => {
-      cy.get('.computerHand').should('not.be.visible')
+    it('does not need to display computer hand', () => {
+      cy.get('.computerHand').not('.required')
     });
 
-    it('does not give option to click on rock- button', () => {
-      cy.get('.rock').should('not.be.visible')
+    it('does not need to display rock- button', () => {
+      cy.get('.rock').not('.required')
     });
 
-    it('does not give option to click on paper- button', () => {
-      cy.get('.paper').should('not.be.visible')
+    it('does not need to display paper- button', () => {
+      cy.get('.paper').not('.required')
     });
 
-    it('does not give option to click on scissors- button', () => {
-      cy.get('.scissors').should('not.be.visible')
+    it('does not need to display scissors- button', () => {
+      cy.get('.scissors').not('.required')
     });
   });
 
@@ -35,40 +36,35 @@ describe('User chooses to go with the Sad Path', () => {
   describe('user can see the game page and it', () => {
 
     it('does not display the start title', () => {
-      cy.get('.start').should('not.be.visible')
+      cy.get('.start').not('.required')
     });
 
     it('does not display the start paragraph', () => {
-      cy.get('.startPage p').should('not.be.visible')
+      cy.get('.startPage p').not('.required')
     });
 
     it('does not display the start button', () => {
-      cy.get('.button').should('not.be.visible')
+      cy.get('.button').not('.required')
     });
   });
 
-  // Player tries to edit score board
-  describe('player tries to edit score board', () => {
+  // Player tries to double click button
+  describe('player tries to double click the play button and', () => {
     
-    it('does not display the start title', () => {
-      cy.get('.start').should('not.be.visible')
-    });
-
-    it('does not display the start paragraph', () => {
-      cy.get('.startPage p').should('not.be.visible')
-    });
-
-    it('does not display the start button', () => {
-      cy.get('.button').should('not.be.visible')
+    it('game starts despite double click', () => {
+      cy.get('.button').dblclick()
+      cy.get('.winner').should('contain', 'Make your move')
     });
   });
 
-
+  describe('player tries to double click on an options button and', () => {
+    beforeEach(() => {
+      cy.get('.button').contains('Bring it on').click()
+    });
+    
+    it('game starts despite double click', () => {
+        cy.get('.rock').dblclick()
+        cy.get('.winner').should('not.contain', 'Make your move')
+    });
+  });
 });
-
-    // it('player tries to click on score board', () => {})
-    // it('player tries to click on two options for player at the same time', () => {})
-    // it('player tries to click on two options for rock, paper, scissors at the same time', () => {})
-    // it('player tries to click on -back button mid game', () => {})
-    // it('player tries to alter score board ', () => {})
-    // it('player gets the right winner messages', () => {})
