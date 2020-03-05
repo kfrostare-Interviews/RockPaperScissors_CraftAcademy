@@ -4,7 +4,7 @@ describe('User chooses to go with the Sad Path', () => {
   })
 
   // Making sure start page displays the start page
-  describe('user can see the start page and it', () {
+  describe('user can see the start page and it', () => {
 
     it('does not display the game title', () => {
       cy.get('.winner').should('not.be.visible')
@@ -32,7 +32,7 @@ describe('User chooses to go with the Sad Path', () => {
   });
 
   // Making sure game page displays the game page
-  describe('user can see the game page and it', () {
+  describe('user can see the game page and it', () => {
 
     it('does not display the start title', () => {
       cy.get('.start').should('not.be.visible')
@@ -48,9 +48,8 @@ describe('User chooses to go with the Sad Path', () => {
   });
 
   // Player tries to edit score board
-  describe('player tries to edit score board', () {
-    beforeEach
-
+  describe('player tries to edit score board', () => {
+    
     it('does not display the start title', () => {
       cy.get('.start').should('not.be.visible')
     });
@@ -64,11 +63,12 @@ describe('User chooses to go with the Sad Path', () => {
     });
   });
 
-})
 
-    it('player tries to click on score board', () => {})
-    it('player tries to click on two options for player at the same time', () => {})
-    it('player tries to click on two options for rock, paper, scissors at the same time', () => {})
-    it('player tries to click on -back button mid game', () => {})
-    it('player tries to alter score board ', () => {})
-    it('player gets the right winner messages', () => {})
+});
+
+    // it('player tries to click on score board', () => {})
+    // it('player tries to click on two options for player at the same time', () => {})
+    // it('player tries to click on two options for rock, paper, scissors at the same time', () => {})
+    // it('player tries to click on -back button mid game', () => {})
+    // it('player tries to alter score board ', () => {})
+    // it('player gets the right winner messages', () => {})

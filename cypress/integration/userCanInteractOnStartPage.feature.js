@@ -7,7 +7,7 @@ describe('User can navigate the Start Page', () => {
 	describe('user can see the start page and it', () => {
     
     it('displays the background image', () => {
-      cy.get('.gameHouse').should('have.css', 'background-image', 'url(/img/orange-1247700.jpg)')		
+      cy.get('.gameHouse').should('have.css', 'background-image', 'url("http://localhost:3001/img/orange-1247700.jpg")')		
     })
 
 		it('displays the Title', () => {
