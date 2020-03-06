@@ -106,8 +106,9 @@
 
 .gameOptions {
   align-items: center;
-  margin-left: 68vh;
-  padding-top: 50px;
+  margin-left: auto;
+  padding-top: auto;
+  width: 80%;
 }
 
 .computerHand {
