@@ -108,7 +108,8 @@
   align-items: center;
   margin-left: auto;
   padding-top: auto;
-  width: 30%;
+  display: flex;
+  justify-content: center;
 }
 
 .computerHand {
