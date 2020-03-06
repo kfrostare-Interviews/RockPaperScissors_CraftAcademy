@@ -60,6 +60,13 @@ I need the score to update automatically after each run
 
 # User stories yet to be realized
 
+**User can play on their phone**
+```
+As a player
+In order unwind on my way home from work
+I'd like to be able to play the game from my phone
+```
+
 **User can play best out of 5**
 ```
 As a player
