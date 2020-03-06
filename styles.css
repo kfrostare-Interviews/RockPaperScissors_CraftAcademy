@@ -106,10 +106,10 @@
 
 .gameOptions {
   align-items: center;
-  /* margin-left: auto; */
-  margin-top: 70px;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
+  padding-right: 10px;
 }
 
 .computerHand {
