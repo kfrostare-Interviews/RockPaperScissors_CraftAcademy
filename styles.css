@@ -107,8 +107,8 @@
 .gameOptions {
   align-items: center;
   margin-left: auto;
-  margin-top: 110px;
-  padding-top: auto;
+  margin-top: 80px;
+  padding: 10px;
   display: flex;
   justify-content: center;
 }
